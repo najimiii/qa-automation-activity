@@ -22,10 +22,6 @@ Clear And Fill Input
     Press Keys    ${locator}    CTRL+a    BACKSPACE
     Input Text    ${locator}    ${value}
 
-Clear And Fill Birthday
-    [Arguments]    ${locator}    ${value}
-    ${birthday}=    Convert To String    ${value}
-
 Change User Information
     [Arguments]    ${user}
     Wait Until Element Is Visible    ${customer_txt_first_name}
@@ -33,7 +29,7 @@ Change User Information
     Clear And Fill Input    ${customer_txt_first_name}    ${user["name"].split(" ")[0]}
     Clear And Fill Input    ${customer_txt_last_name}    ${user["name"].split(" ")[1]}
     Clear And Fill Input    ${customer_txt_email}    ${user["email"]}
-    # Clear And Fill Birthday    ${customer_txt_birthday}    ${user["birthday"]}
+    Input Text    ${customer_txt_birthday}    ${user["birthday"]}
     Clear And Fill Input    ${customer_txt_address}    ${user["address"]["street"]} ${user["address"]["suite"]}
     Clear And Fill Input    ${customer_txt_city}    ${user["address"]["city"]}
     Clear And Fill Input    ${customer_txt_state}    ${user["state"]}
