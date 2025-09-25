@@ -1,0 +1,16 @@
+customer_txt_first_name = '//input[@name="first_name"]'
+customer_txt_last_name = '//input[@name="last_name"]'
+customer_txt_email = '//input[@name="email"]'
+customer_txt_birthday = '//input[@name="birthday"]'
+customer_txt_address = '//textarea[@name="address"]'
+customer_txt_city = '//input[@name="city"]'
+customer_txt_state = '//input[@name="stateAbbr"]'
+customer_txt_zipcode = '//input[@name="zipcode"]'
+customer_txt_password = '//input[@name="password"]'
+customer_txt_confirm_password = '//input[@name="confirm_password"]'
+customer_btn_submit = '//button[@type="submit"]'
+
+
+nav_btn_customers = '(//p[text()="Customers"])[2]'
+customers_btn_create = '//a[@aria-label="Create"]'
+table = '//table//tbody//tr'
