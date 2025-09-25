@@ -43,7 +43,7 @@ Change User Information
     
     Click Button    ${customer_btn_submit}
     Wait Until Page Contains    Customer updated
-    Log To Console    Customer updated: ${user["name"]}
+    Log To Console    Updated customer: ${user["name"]}
     Go To Customers Page
 
 

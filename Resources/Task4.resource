@@ -15,19 +15,19 @@ Log Table Data
         ${orders}=    Get Text    ((${table})[${row}]//td)[4]
         ${total_spent}=    Get Text    ((${table})[${row}]//td)[5]
         ${latest_purchase}=    Get Text    ((${table})[${row}]//td)[6]
-        ${groups}=    Get Text    ((${table})[${row}]//td)[8]
+        ${segments}=    Get Text    ((${table})[${row}]//td)[8]
         
         IF    "\\n" in """${name}"""
             ${name}    Evaluate    """${name}""".replace("\\n", " ")[1:]
         END
-        
+
         Log To Console    ===== ${name} =====
         Log To Console    Name: ${name}
         Log To Console    Last seen: ${last_seen}
         Log To Console    Orders: ${orders}
         Log To Console    Total Spent: ${total_spent}
         Log To Console    Latest Purchase: ${latest_purchase}
-        Log To Console    Groups: ${groups}
+        Log To Console    Segments: ${segments}
         Log To Console    ===================\n
         
         ${row}=    Evaluate    ${row}+1

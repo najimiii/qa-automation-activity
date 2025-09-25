@@ -21,7 +21,7 @@ Display Users With Spending
         ${row}=    Evaluate    ${row}+1
     END
 
-    Sleep    10s
+    Sleep    2s
 
 Calculate Total Spending
     ${row}=    Set Variable    1
@@ -57,7 +57,7 @@ Validate Total Spending
     ${threshold}=    Set Variable    3500
 
     IF    ${total_rounded} < ${threshold}
-        Log To Console    FAIL: Total spending (${total_rounded}) is below minimum threshold ($3,500)
+        Log To Console    FAIL: Total spending ($${total_rounded}) is below minimum threshold ($3,500)
         Fail    Total spending ($${total_rounded}) is below minimum threshold ($3,500)
     ELSE
         Log To Console    PASS: Total spending ($${total_rounded}) meets minimum threshold ($3,500)
